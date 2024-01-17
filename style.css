@@ -1,0 +1,226 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:white;
+    width: 100%;
+    height: auto;
+    overflow:hidden ;
+    position: relative;
+}
+
+nav{
+    z-index: 4;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    backdrop-filter: brightness(100%);
+}
+
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-container .logo img{
+    width: 140px;
+    height: 50px;
+}
+
+.nav-container .links a{
+    font-size: 1.3rem;
+    color: black;
+    text-decoration: none;
+    margin: 0 20px;
+    transition: 0.3s linear;
+}
+
+.nav-container .links a:hover{
+    color: #fca61f;
+    text-shadow: 1px 1px #fca61f ;
+}
+
+nav button{
+    width: 150px;
+    height: 40px;
+    border-radius:20px;
+    background-color: #fca61f;
+    color: white;
+    font-size: 1.2rem;
+    transition: 0.3s linear;
+    font-weight: 700;
+    box-shadow: 1px 1px 10px #fca61f;
+    border: none;
+    outline: none;
+}
+
+nav button:hover{
+    background-color:white;
+    color: #fca61f;
+    border:2px solid #fca61f;
+}
+
+nav svg{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+nav .dropmenu{
+    position: absolute;
+    top: 0;
+    backdrop-filter: blur(2px);
+    width: 100%;
+    height: auto;
+    transform: translateY(-300px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.3s linear;
+}
+
+.dropmenu a{
+    font-size: 1.4rem;
+    text-align: center;
+    width: 100%;
+    color: black;
+    padding: 10px 0;
+    text-decoration: none;
+    transition: 0.3s linear;
+}
+
+.dropmenu a:hover{
+    background-color: black;
+    color: white;
+}
+
+.dropmenu button{
+    width: 100%;
+    height: 45px;
+}
+
+/* Landing Page  */
+
+section{
+    width: 100%;
+    height: 100vh;
+}
+
+section .content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.content .main-content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10%;
+}
+
+.main-content h1{
+    font-size: clamp(2rem, 1rem + 5vw, 6rem);
+}
+
+.main-content span{
+    font-size: clamp(2rem, 1rem + 5vw, 6rem);
+    font-weight: 700;
+    color: #fca61f;
+}
+
+.main-content p{
+    font-size: clamp(1rem, 1rem + 5vw, 1.2rem);
+}
+
+.main-content .buttons{
+    width: 70%;
+    margin: 5%;
+    min-height: 5.5vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-content .buttons button{
+    width: 160px;
+    margin: 0 10px;
+    border-radius: 20px;
+    background: #fca61f;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transform: 0.2s linear;
+}
+
+.buttons button:hover{
+    box-shadow: 2px 2px 30px #fca61f;
+}
+
+.content .image{
+    width: 50%;
+    display: flex;
+    margin-top: 5px;
+    justify-content: center;
+}
+
+.image img{
+    margin-top: 40px;
+    width: 500px;
+    filter: drop-shadow(0 0 400px #fca61f);
+}
+
+@media (max-width:768px){
+    .links{
+        display: none;
+    }
+
+    .nav-container button{
+        display: none;
+    }
+
+    nav svg{
+        display: block;
+    }
+
+    .nav-container .logo{
+        position: absolute;
+        left: 10px;
+    }
+
+    .content{
+        margin-top: -100px;
+        display: flex;
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .image img{
+        width: 120%;
+    }
+
+    .content .main-content{
+        max-width: 350px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .main-content p{
+        text-align: center;
+    }
+
+}
